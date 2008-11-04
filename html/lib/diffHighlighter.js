@@ -49,6 +49,10 @@ var highlightDiffs = function() {
 				line2 += ++hunk_start_line_2 + "\n";
 				diffContent += "<div class='addline'>" + l + "</div>";
 			} else if (firstChar == "-") {
+				// Highlight trailing whitespace
+				if (m = l.match(/\s+$/))
+					l = l.replace(/\s+$/, "<span class='whitespace'>" + m + "</span>");
+
 				line1 += ++hunk_start_line_1 + "\n";
 				line2 += "\n";
 				diffContent += "<div class='delline'>" + l + "</div>";

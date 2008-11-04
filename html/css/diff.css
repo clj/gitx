@@ -33,10 +33,13 @@ pre code {
 	border-left: 5px solid black;
 }
 
-.whitespace {
+.delline .whitespace {
 	background-color: rgba(255,0,0,0.5);
 }
 
+.addline .whitespace {
+	background-color: rgba(0,255,0,0.5);
+}
 
 table.diff {
 	margin-top: 15px;
